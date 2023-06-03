@@ -9,6 +9,7 @@ export function greeting(msg: string, options?: Options | undefined) {
 }
 
 import chalk from "chalk";
+// logger for error or success messages
 function error(msg: string) {
   console.log(chalk.red.bold(msg));
 }
@@ -22,7 +23,7 @@ function success(msg: string) {
 import yargs from "yargs";
 export function processArgs() {
   const args = yargs(process.argv.slice(2)).argv;
-  console.log(args);
+  //  console.log(args);
 
   //@ts-ignore the .build is if the project hast the --build project
   switch (args.build) {
