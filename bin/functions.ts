@@ -23,16 +23,24 @@ function success(msg: string) {
 import yargs from "yargs";
 export function processArgs() {
   const args = yargs(process.argv.slice(2)).argv;
-  //  console.log(args);
+    console.log(args);
 
   //@ts-ignore the .build is if the project hast the --build project
-  switch (args.build) {
-    case "php":
-      success("Building the project for PHP - CORE apps");
-      break;
+  if (args.build) {
+    //@ts-ignore
+    switch (args.build) {
+      case "php":
+        success("Building the project for PHP - CORE apps");
+        break;
 
-    default:
-      error("No arguments on the build flag !");
-      break;
+      default:
+        error("No arguments on the build flag !");
+        break;
+    }
+    //@ts-ignore
+  } else if (args.h) {
+    success("Here i will return help infos !");
+  } else {
+    error("No valid arguments were given ! To get help use windi --help");
   }
 }
