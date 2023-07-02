@@ -22,7 +22,7 @@ dependencies:
 - This will use tailwindcss command but with very easy to use syntax ex:
 
 '''
-* bun run windi --tailwind -> creates a tailwind css with postcss
+* bun run windi --init laravel -> It add tailwindcss to the project pregenerated for laravel 
 '''
 
 # TODO 
