@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * This file will contain the windi cli starter
- * So you will be able execute:
+ * This file will contain the windi cli starter So you will be able execute:
  * windi --init-php,
  * windi --init-html
  * windi --init-js (for js projects without a bundler)

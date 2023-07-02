@@ -12,6 +12,6 @@
     "yargs": "^17.7.2"
   },
   "scripts": {
-    "windi": "bun ./bin/index.ts"
+    "windi": "bun ./bin/windi.ts"
   }
 }
