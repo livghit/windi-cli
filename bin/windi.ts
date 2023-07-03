@@ -18,6 +18,7 @@ function windi() {
   greeting(chalkTitle, {
     padding: 2,
     backgroundColor: "cyan",
+    align: "center", 
     textAlignment: "center",
   });
 

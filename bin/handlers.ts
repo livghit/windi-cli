@@ -6,7 +6,7 @@ import { success , error } from "./functions";
 export function handleBuildArgument(args: any) {
   switch (args.build) {
     case "php":
-      success("Building the project for PHP - CORE apps");
+      success("Building the project for PHP");
       break;
 
     default:
@@ -15,6 +15,20 @@ export function handleBuildArgument(args: any) {
   }
 }
 
-export function handleHelpArgument(){
+export function handleHelpArgument(args: any){
+ switch (args.h) {
+    default:
+      success("Display all the Commands!");
+      break;
+  }
+
+}
+
+export function handleInitArguments(args: any){
+ switch (args.init) {
+    default:
+      success("Building vanilla tailwindcss");
+      break;
+  }
 
 }

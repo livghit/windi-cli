@@ -18,14 +18,17 @@ export function success(msg: string) {
 }
 
 /**
- * function for looking up the argument using yargs
- * */
+ * function for looking up the argument using yargs */
 import yargs from "yargs";
-import { handleBuildArgument } from "./handlers";
+import {
+  handleBuildArgument,
+  handleHelpArgument,
+  handleInitArguments,
+} from "./handlers";
 
 export function processArgs() {
   const args = yargs(process.argv.slice(2)).argv;
-  console.log(args);
+  // console.log(args);
 
   //@ts-ignore
   if (args.build) {
@@ -34,8 +37,12 @@ export function processArgs() {
     //@ts-ignore
   } else if (args.h) {
     //@ts-ignore
-    handleHelpArgument(args.h);
+    handleHelpArgument(args);
+  }
+  // @ts-ignore
+  else if (args.init) {
+    handleInitArguments(args);
   } else {
-    error("No valid arguments were given ! To get help use windi --help");
+    error("No valid arguments were given ! To get help use windi --h");
   }
 }
