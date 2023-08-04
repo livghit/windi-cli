@@ -1,4 +1,3 @@
-# windi
 FULL WRERITE USING GO 
 
 # Windi CLI - is my custom CLI to get Tailwindcss into my projects with only one command 
